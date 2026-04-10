@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: Scrapper
+  liquibase:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+rest:
+  client:
+    bot:
+      base-url: "${BOT_URL:http://localhost:8080/}"
+    github:
+      token: "${GITHUB_TOKEN}"
+      base-url: "${GITHUB_URL:https://api.github.com/}"
+    stack-exchange:
+      key: "${SO_TOKEN_KEY}"
+      access-token: "${SO_ACCESS_TOKEN}"
+      base-url: "${SO_URL:https://api.stackexchange.com/2.3/}"
+
+scheduler:
+  link-updates:
+    cron: "0 */1 * * * *"
+
+server:
+  port: 8081
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui
