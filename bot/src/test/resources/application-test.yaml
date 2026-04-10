@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: Bot
+  liquibase:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+rest:
+  client:
+    scrapper:
+      base-url: http://localhost:8080
